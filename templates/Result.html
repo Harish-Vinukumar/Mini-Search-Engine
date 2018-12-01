@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+	<head>
+		<title>HarishCoder</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Caveat|Covered+By+Your+Grace|Gloria+Hallelujah|Kaushan+Script|Marck+Script|Satisfy|Shadows+Into+Light|Yellowtail" rel="stylesheet">
+	</head>
+ 
+	<body>
+		<center>
+			<h1><em>SH </em>Mini Search Engine</h1>
+		</center>
+		<br />
+		<form method="POST" action="/searchWordInWebPage">
+			<div class="form-group" style="position: absolute; left: 5%;">
+
+				<input style="height: 30px; width: 300px;" type="text" value="" name="search_box" autofocus/>		
+				<input style=" font-size: 13px; text-align: center; font-weight: bold" class="btn btn-primary" type="submit" name="search" value="Search" />
+			</div>
+		</form>
+		<div style="position: absolute; left: 5%; top: 20%; word-wrap: normal; margin-right: auto">
+			<p>Total {{ counter }} links found..</p>
+			<br />
+			{% for i in range(0, counter) %}
+				<a href= "{{ links[i] }}"> {{ titles[i] }} </a>
+				<p><b> {{ descs[i] }} </b></p>
+				<p><em> {{ links[i] }} </em></p>
+				<br />
+			{% endfor %}
+		</div>
+</body>
+</html>
