@@ -7,3 +7,9 @@ Tools used:
 3. HTML
 4. CSS
 5. BootStrap
+
+Python Modules:
+1. Flask
+2. re
+3. URLLIB
+4. BS4
